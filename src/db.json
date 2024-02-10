@@ -1,0 +1,42 @@
+[
+  {
+    "category": "Bakery",
+    "image": "https://www.shutterstock.com/image-photo/assorted-pastry-bread-arranged-on-600nw-2169704423.jpg"
+  },
+  {
+    "category": "Bar",
+    "image": "https://images.unsplash.com/photo-1572116469696-31de0f17cc34?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YmFyfGVufDB8fDB8fHww"
+  },
+  {
+    "category": "Cafe",
+    "image": "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y2FmZXxlbnwwfHwwfHx8MA%3D%3D"
+  },
+  {
+    "category": "FastFoodRestaurant",
+    "image": "https://i.pinimg.com/564x/ee/bb/9c/eebb9cfe1197197bbef8c963e1bedd32.jpg"
+  },
+  {
+    "category": "IceCreamShop",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Venice_-_Ice_cream_parlor_-_4017.jpg"
+  },
+  {
+    "category": "ChineseRestaurant",
+    "image": "https://media-cdn.tripadvisor.com/media/photo-s/14/29/52/54/hong-teh-chinese-restaurant.jpg"
+  },
+  {
+    "category": "PizzaPlace",
+    "image": "https://static.vecteezy.com/system/resources/previews/000/294/962/original/a-pizza-shop-on-white-background-vector.jpg"
+  },
+  {
+    "category": "ShushiRestaurant",
+    "image": "https://sakura.co/wp-content/uploads/2022/03/shutterstock_673266502-2.png"
+  },
+  {
+    "category": "ThaiRestaurant",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv7zYQE20Y27SM2t3--uSyPnlVHnZGR-JvOLIRSAf9nQ&s"
+  },
+  {
+    "category": "VegetarianRestaurant",
+    "image": "https://assets.gqindia.com/photos/5d88c0fd60e1e8000856c9fe/16:9/w_2560%2Cc_limit/Best-veg-restaurants.jpg"
+  }
+]
