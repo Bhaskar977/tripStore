@@ -9,7 +9,7 @@
 <h1>
 Home Page
 </h1>
-<img src="https://github.com/Bhaskar977/tripStore/assets/98516131/bc134f42-62ac-4a61-bf7b-fb0c44fb7d5b" />
+<img src="https://github.com/Bhaskar977/tripStore/assets/98516131/64ec5984-6ea7-463b-82cd-30127e75d30d" />
 
 <h1>
 Lisiting Page
