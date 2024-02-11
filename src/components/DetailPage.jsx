@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+// import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import "./DetailPage.css";
 
 const DetailPage = () => {
   const { placeId } = useParams();
@@ -33,28 +34,29 @@ const DetailPage = () => {
 
   return (
     <div>
-      <h1 style={{ textAlign: "center" }}>Detail Page of the Shops</h1>
-      <div style={{ display: "flex", justifyContent: "space-between",marginTop:"20px"}}>
-        <div
-          style={{
-            borderRadius: "10px",
-            width: "60%",
-            padding: "20px",
-            boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
-          }}
-        >
-          <h1>{placeDetails.name}</h1>
-          <p>
-            <strong>Address</strong> : {placeDetails.formatted_address}
-          </p>
-          <p>
-            <strong>Ratings : </strong>
-            {placeDetails.rating}
-          </p>
+      <h1 className="heading">Detail Page of the Shops</h1>
+      <div className="container">
+        <div className="inner-container">
+          {/* <div className="img">
+            <img src={placeDetails.icon} alt="" />
+          </div> */}
+          <div>
+            <h1>{placeDetails.name}</h1>
+            <p>
+              <strong>Address</strong> : {placeDetails.formatted_address}
+            </p>
+            <p>
+              <strong>Ratings : </strong>
+              {placeDetails.rating}
+            </p>
+          </div>
         </div>
         <div>
-          <Link to={`/listing/${cat}`} style={{ textDecoration: "none", color: "#000" }}>
-            <button>Go Back to Listing Page</button>
+          <Link
+            to={`/listing/${cat}`}
+            style={{ textDecoration: "none", color: "#000" }}
+          >
+            <button className="btn">Go Back to Listing Page</button>
           </Link>
         </div>
       </div>

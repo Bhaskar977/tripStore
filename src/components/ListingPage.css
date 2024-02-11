@@ -1,0 +1,27 @@
+.listing-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  background-color: #ffffff;
+}
+
+.listing-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.listing-address {
+  font-size: 1rem;
+  color: #555555;
+}
+
+.btn{
+    border:none;
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+    color: blue;
+}

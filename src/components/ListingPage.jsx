@@ -4,6 +4,7 @@ import { Autocomplete } from "@react-google-maps/api";
 import React, { useState, useEffect, useRef } from "react";
 import { GoogleMap, useLoadScript } from "@react-google-maps/api";
 import { Link, useParams } from "react-router-dom";
+import "./ListingPage.css";
 
 const ListingPage = () => {
   const [places, setPlaces] = useState([]);
@@ -104,7 +105,13 @@ const ListingPage = () => {
           </Box>
         </Toolbar>
       </AppBar>
-      <div style={{ display: "flex", justifyContent: "space-between",marginTop:"20px"}}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          marginTop: "20px",
+        }}
+      >
         <div>
           {currentItems.length > 0 ? (
             currentItems.map((place) => (
@@ -114,17 +121,11 @@ const ListingPage = () => {
               >
                 <div
                   key={place.place_id}
-                  style={{
-                    width: "80%",
-                    padding: "10px",
-                    margin: "10px 0 10px 0",
-                    boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
-                    borderRadius: "10px",
-                  }}
+                  className="listing-container"
                   onClick={() => handleClick()}
                 >
-                  <h3>{place.name}</h3>
-                  <p>{place.formatted_address}</p>
+                  <h3 className="listing-name">{place.name}</h3>
+                  <p className="listing-address">{place.formatted_address}</p>
                 </div>
               </Link>
             ))
@@ -134,7 +135,7 @@ const ListingPage = () => {
         </div>
         <div>
           <Link to="/" style={{ textDecoration: "none", color: "#000" }}>
-            <button>Go Back to Home</button>
+            <button className="btn">Go Back to Home</button>
           </Link>
         </div>
       </div>
