@@ -10,39 +10,45 @@ const Home = () => {
     setData(product);
   }, []);
 
-//   console.log(data);
-
   return (
-    <Box sx={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)" }}>
-      {data?.map((item) => (
-        <Link style={{textDecoration:"none"}} to={`/listing/${item.category}`}>
-          <Box
-            key={item.id}
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              p: 4,
-              mb: 2,
-            }}
+    <div>
+      <h1 style={{textAlign:"center"}}>List of Choices</h1>
+      <Box sx={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)"}}>
+        {data?.map((item) => (
+          <Link
+            to={`/listing/${item.category}`}
+            style={{textDecoration:"none"}}
           >
-            <img
-              src={item.image}
-              alt={item.title}
-              style={{
-                width: 100,
-                height: 100,
-                marginRight: 10,
-                borderRadius: "50%",
+            <Box
+              key={item.id}
+              sx={{
+                width:"80%",
+                borderRadius:"10px",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" ,
+                p: 3,
+                mb: 2,
               }}
-            />
-            <h3 style={{color:"#000"}}>{item.category}</h3>
-          </Box>
-        </Link>
-      ))}
-    </Box>
+            >
+              <img
+                src={item.image}
+                alt={item.title}
+                style={{
+                  width: 100,
+                  height: 100,
+                  marginRight: 10,
+                  borderRadius: "50%",
+                }}
+              />
+              <h3 style={{ color: "#000"}}>{item.category}</h3>
+            </Box>
+          </Link>
+        ))}
+      </Box>
+    </div>
   );
 };
 
 export default Home;
-
