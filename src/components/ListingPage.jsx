@@ -9,7 +9,7 @@ import "./ListingPage.css";
 const ListingPage = () => {
   const [places, setPlaces] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage, setItemsPerPage] = useState(5);
+  const [itemsPerPage, setItemsPerPage] = useState(3);
   const [searchValue, setSearchValue] = useState(""); // Set initial search value
   const searchBoxRef = useRef(null);
   const { category } = useParams();
@@ -81,6 +81,91 @@ const ListingPage = () => {
 
   console.log(places);
 
+  const dynamicCategoryImages =
+    category === "Bakery" ? (
+      <img
+      style={{ borderRadius: "50%" }}
+      width="80%"
+      height="100%"
+        src="https://logo.com/image-cdn/images/kts928pd/production/c6d962682e37feae1b76b3541390601b11fa3238-446x438.png?w=1080&q=72"
+        alt=""
+      />
+    ) : category === "Bar" ? (
+      <img
+        style={{ borderRadius: "50%" }}
+        width="80%"
+        height="100%"
+        src="https://images.unsplash.com/photo-1572116469696-31de0f17cc34?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YmFyfGVufDB8fDB8fHww"
+        alt=""
+      />
+    ) : category === "Cafe" ? (
+      <img
+        style={{ borderRadius: "50%" }}
+        width="80%"
+        height="100%"
+        src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y2FmZXxlbnwwfHwwfHx8MA%3D%3D"
+        alt=""
+      />
+    ) : category === "FastFoodRestaurant" ? (
+      <img
+        style={{ borderRadius: "50%" }}
+        width="80%"
+        height="100%"
+        src="https://i.pinimg.com/564x/ee/bb/9c/eebb9cfe1197197bbef8c963e1bedd32.jpg"
+        alt=""
+      />
+    ) : category === "IceCreamShop" ? (
+      <img
+        style={{ borderRadius: "50%" }}
+        width="80%"
+        height="100%"
+        src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Venice_-_Ice_cream_parlor_-_4017.jpg"
+        alt=""
+      />
+    ) : category === "ChineseRestaurant" ? (
+      <img
+        style={{ borderRadius: "50%" }}
+        width="80%"
+        height="100%"
+        src="https://media-cdn.tripadvisor.com/media/photo-s/14/29/52/54/hong-teh-chinese-restaurant.jpg"
+        alt=""
+      />
+    ) : category === "PizzaPlace" ? (
+      <img
+        style={{ borderRadius: "50%" }}
+        width="80%"
+        height="100%"
+        src="https://static.vecteezy.com/system/resources/previews/000/294/962/original/a-pizza-shop-on-white-background-vector.jpg"
+        alt=""
+      />
+    ) : category === "ShushiRestaurant" ? (
+      <img
+        style={{ borderRadius: "50%" }}
+        width="80%"
+        height="100%"
+        src="https://sakura.co/wp-content/uploads/2022/03/shutterstock_673266502-2.png"
+        alt=""
+      />
+    ) : category === "ThaiRestaurant" ? (
+      <img
+        style={{ borderRadius: "50%" }}
+        width="80%"
+        height="100%"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv7zYQE20Y27SM2t3--uSyPnlVHnZGR-JvOLIRSAf9nQ&s"
+        alt=""
+      />
+    ) : category === "VegetarianRestaurant" ? (
+      <img
+        style={{ borderRadius: "50%" }}
+        width="80%"
+        height="100%"
+        src="https://assets.gqindia.com/photos/5d88c0fd60e1e8000856c9fe/16:9/w_2560%2Cc_limit/Best-veg-restaurants.jpg"
+        alt=""
+      />
+    ) : (
+      ""
+    );
+
   // Logic to paginate places
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
@@ -105,13 +190,14 @@ const ListingPage = () => {
           </Box>
         </Toolbar>
       </AppBar>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          marginTop: "20px",
-        }}
-      >
+      <h1 className="heading">Listing Page of {category}</h1>
+      <div>
+        <Link to="/" style={{ textDecoration: "none", color: "#000" }}>
+          <button className="btn">Go Back to Home</button>
+        </Link>
+      </div>
+      <div className="listing">
+        <div>{dynamicCategoryImages}</div>
         <div>
           {currentItems.length > 0 ? (
             currentItems.map((place) => (
@@ -133,30 +219,21 @@ const ListingPage = () => {
             <p>Loading...</p>
           )}
         </div>
-        <div>
-          <Link to="/" style={{ textDecoration: "none", color: "#000" }}>
-            <button className="btn">Go Back to Home</button>
-          </Link>
-        </div>
       </div>
 
       {/* Pagination */}
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-around",
-          textDecoration: "none",
-        }}
-      >
+      <div className="pagination">
         <div>
           <button
+            className="prev-btn"
             onClick={() => setCurrentPage(currentPage - 1)}
             disabled={currentPage === 1}
           >
             Previous
           </button>
-          <button>{currentPage}</button>
+          <button className="btn-curr">{currentPage}</button>
           <button
+            className="next-btn"
             onClick={() => setCurrentPage(currentPage + 1)}
             disabled={indexOfLastItem >= places.length}
           >
