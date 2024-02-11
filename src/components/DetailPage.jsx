@@ -35,11 +35,16 @@ const DetailPage = () => {
   return (
     <div>
       <h1 className="heading">Detail Page of the Shops</h1>
+      <div>
+        <Link
+          to={`/listing/${cat}`}
+          style={{ textDecoration: "none", color: "#000" }}
+        >
+          <button className="btn">Go Back to Listing Page</button>
+        </Link>
+      </div>
       <div className="container">
         <div className="inner-container">
-          {/* <div className="img">
-            <img src={placeDetails.icon} alt="" />
-          </div> */}
           <div>
             <h1>{placeDetails.name}</h1>
             <p>
@@ -50,14 +55,6 @@ const DetailPage = () => {
               {placeDetails.rating}
             </p>
           </div>
-        </div>
-        <div>
-          <Link
-            to={`/listing/${cat}`}
-            style={{ textDecoration: "none", color: "#000" }}
-          >
-            <button className="btn">Go Back to Listing Page</button>
-          </Link>
         </div>
       </div>
     </div>

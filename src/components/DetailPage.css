@@ -20,3 +20,13 @@
 .img {
   margin-top: 36px;
 }
+
+.btn {
+  border: none;
+  padding: 10px 20px 10px 20px;
+  border-radius: 5px;
+  color: rgb(167, 27, 27);
+  margin-left: 85%;
+  margin-top: 20px;
+  cursor: pointer;
+}
