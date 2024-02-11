@@ -19,5 +19,5 @@ Lisiting Page
 <h1>
 Details Page
 </h1>
-<img src="https://github.com/Bhaskar977/tripStore/assets/98516131/5d33fad5-672e-43ec-a587-315b15f226ea" />
+<img src="https://github.com/Bhaskar977/tripStore/assets/98516131/cc28d789-d5b1-4c5a-9f71-9a466408cfd0" />
 
