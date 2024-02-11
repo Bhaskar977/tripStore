@@ -14,7 +14,7 @@ Home Page
 <h1>
 Lisiting Page
 </h1>
-<img src="https://github.com/Bhaskar977/tripStore/assets/98516131/46b0235e-c21f-4db7-859a-3335a874585f" />
+<img src="https://github.com/Bhaskar977/tripStore/assets/98516131/7c00e870-74be-4c8a-8797-da0327967014" />
 
 <h1>
 Details Page
