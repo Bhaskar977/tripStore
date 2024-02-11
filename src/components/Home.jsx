@@ -12,7 +12,7 @@ const Home = () => {
 
   return (
     <div>
-      <h1 style={{textAlign:"center"}}>List of Choices</h1>
+      <h1 style={{textAlign:"center",color:"rgb(167, 27, 27)"}}>List of Choices</h1>
       <Box sx={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)"}}>
         {data?.map((item) => (
           <Link
