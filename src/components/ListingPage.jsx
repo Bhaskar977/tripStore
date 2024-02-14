@@ -44,20 +44,20 @@ const ListingPage = () => {
 
   useEffect(() => {
     if (!isLoaded) return;
-    const searchBox = new window.google.maps.places.SearchBox(
-      searchBoxRef.current
-    );
-
-    searchBox.addListener("places_changed", () => {
+  
+    const searchBox = new window.google.maps.places.SearchBox(searchBoxRef.current);
+  
+    const placesChangedListener = searchBox.addListener("places_changed", () => {
       const places = searchBox.getPlaces();
       setSearchValue("");
       console.log(places);
     });
-
+  
     return () => {
-      searchBox.removeListener("places_changed");
+      window.google.maps.event.removeListener(placesChangedListener);
     };
   }, [isLoaded]);
+
 
   // Fetch places function using the Google place API.
   const fetchPlaces = async (location) => {
